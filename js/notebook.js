@@ -1,4 +1,3 @@
-console.log("hello");
 //======= 1 ============================================
 // const magicBtn = document.querySelector(".js-magic-btn");
 
@@ -18,7 +17,7 @@ console.log("hello");
 /*
  * Document.querySelector* и Element.querySelector*
  */
-//======= 2 =================================================
+//======= 2 ==========================================
 // const magicBtn = document.querySelector('.js-magic-btn');
 
 /*
@@ -56,7 +55,7 @@ console.log("hello");
 // const actions = document.querySelectorAll('.js-actions button');
 // console.log(actions);
 // console.log(actions[2].dataset.action);
-//============ 3 ===============================================
+//============ 3 ==========================
 // const magicBtn = document.querySelector('.js-magic-btn');
 /*
  * Интерфейс classList
@@ -76,8 +75,7 @@ console.log("hello");
 // console.log(linkEl);
 // linkEl.classList.add('site-nav__link--current');
 
-//============= 4 ====================================================
-
+//============= 4 ======================
 /*
  * Свойства «навигации» по DOM-узлам (взять список)
  * http://fecore.net.ua/books/m5ph3r-javascript/module-07/dom-traversal.html
@@ -90,7 +88,7 @@ console.log("hello");
 // console.log(firstNavItemEl);
 // console.log(navEl.children);
 // console.log(navEl.lastElementChild);
-//==================== 5 ==================================
+//==================== 5 ==============
 /*
  * - Создание элементов
  * - Вставка узлов: appendChild(elem), insertBefore(elem, nextSibling), append(...elems), prepend(...elems)
@@ -188,7 +186,7 @@ console.log("hello");
 // const elements = makeColorPickerOptions(colorPickerOptions);
 // colorPickerContainerEl.append(...elements);
 //================ 7 =======================================
-// import products from './data/proucts.js';
+// import products from './data/products.js';
 
 /*
  * Создаём карточку продукта
@@ -284,3 +282,13 @@ const titleEl = document.querySelector(".title");
 // tableEl.insertAdjacentHTML('beforeend', transactionTableRowsMarkup);
 
 // console.log(transactionTableRowsMarkup);
+//!=================================================
+// const heading = document.createElement("h1"); //<h1></h1>
+
+// heading.textContent = "This is a heading"; //<h1>This is a heading</h1>
+
+// const image = document.createElement("img"); //<img>
+// image.setAttribute("src", "https://placeimg.com/640/480/nature");
+// image.setAttribute("alt", "nature"); // <img src="https://placeimg.com/640/480/nature" alt="nature">
+// console.log(image);
+//!===========================================
