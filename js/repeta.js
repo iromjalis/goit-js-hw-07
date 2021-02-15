@@ -11,16 +11,16 @@ const colorPickerOptions = [
 
 const colorPickerContainerEl = document.querySelector(".js-color-picker");
 
-// const elements = colorPickerOptions.map((option) => {
-//   const buttonEl = document.createElement("button");
-//   buttonEl.type = "button";
-//   buttonEl.classList.add("color-picker__option");
-//   buttonEl.textContent = option.label;
-//   buttonEl.style.backgroundColor = option.color;
-//   console.log(buttonEl);
-//   return buttonEl;
-// });
-// console.log(elements);
+const elements = colorPickerOptions.map((option) => {
+  const buttonEl = document.createElement("button");
+  buttonEl.type = "button";
+  buttonEl.classList.add("color-picker__option");
+  buttonEl.textContent = option.label;
+  buttonEl.style.backgroundColor = option.color;
+  console.log(buttonEl);
+  return buttonEl;
+});
+console.log(elements);
 
 //!function
 
@@ -37,33 +37,33 @@ const colorPickerContainerEl = document.querySelector(".js-color-picker");
 // };
 
 // const elements = makeColorPickerOptions(colorPickerOptions);
-// colorPickerContainerEl.append(...elements);
+colorPickerContainerEl.append(...elements);
 //========================================
 
-const productsContainerEl = document.querySelector(".js-products");
+// const productsContainerEl = document.querySelector(".js-products");
 
-const makeProductCard = ({ name, description, price }) => {
-  const productEl = document.createElement("article");
-  productEl.classList.add("product");
+// const makeProductCard = ({ name, description, price }) => {
+//   const productEl = document.createElement("article");
+//   productEl.classList.add("product");
 
-  const nameEl = document.createElement("h2");
-  nameEl.textContent = name;
-  nameEl.classList.add("product-name");
+//   const nameEl = document.createElement("h2");
+//   nameEl.textContent = name;
+//   nameEl.classList.add("product__name");
 
-  const descrEl = document.createElement("p");
-  descrEl.textContent = description;
-  descrEl.classList.add("product-desc");
+//   const descrEl = document.createElement("p");
+//   descrEl.textContent = description;
+//   descrEl.classList.add("product__descr");
 
-  const priceEl = document.createElement("p");
-  priceEl.textContent = `Цена ${price} кредитов`;
-  priceEl.classList.add("product-price");
+//   const priceEl = document.createElement("p");
+//   priceEl.textContent = `Цена ${price} кредитов`;
+//   priceEl.classList.add("product__price");
 
-  productEl.append(nameEl, descrEl, priceEl);
-  return productEl;
-};
+//   productEl.append(nameEl, descrEl, priceEl);
+//   return productEl;
+// };
 
-console.log(makeProductCard(products[1]));
+// console.log(makeProductCard(products[1]));
 
-const elements = products.map(makeProductCard);
-console.log(elements);
-productsContainerEl.append(...elements);
+// const element = products.map(makeProductCard);
+// console.log(element);
+// productsContainerEl.append(...element);
