@@ -4,10 +4,7 @@ body {
   line-height: 1.5;
   color: hsl(0, 0%, 16%);
 }
-ul {
-  text-decoration: none;
-  padding-inline-start: 0;
-}
+
 .flex {
   display: inline-flex;
   justify-content: center;

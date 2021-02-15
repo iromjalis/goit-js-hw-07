@@ -153,13 +153,22 @@ const colorPickerOptions = [
   { label: "pink", color: "#E91E63" },
   { label: "indigo", color: "#3F51B5" },
 ];
+const colorPickerContainerEl = document.querySelector(".js-color-picker");
 
-// const colorPickerContainerEl = document.querySelector('.js-color-picker');
+// const option = colorPickerOptions[0];
 
-// const elements = colorPickerOptions.map(option => {
-//   const buttonEl = document.createElement('button');
-//   buttonEl.type = 'button';
-//   buttonEl.classList.add('color-picker__option');
+// const buttonEl = document.createElement("button");
+// buttonEl.type = "button";
+// buttonEl.classList.add("color-picker__option");
+// buttonEl.textContent = option.label;
+// buttonEl.style.backgroundColor = option.color;
+
+// console.log(buttonEl);
+
+// const elements = colorPickerOptions.map((option) => {
+//   const buttonEl = document.createElement("button");
+//   buttonEl.type = "button";
+//   buttonEl.classList.add("color-picker__option");
 //   buttonEl.textContent = option.label;
 //   buttonEl.style.backgroundColor = option.color;
 
@@ -167,15 +176,16 @@ const colorPickerOptions = [
 // });
 
 // console.log(elements);
+// colorPickerContainerEl.append(...elements);
 
 /*
  * Пишем функцию для создания разметки колорпикера
  */
-// const makeColorPickerOptions = options => {
-//   return options.map(option => {
-//     const buttonEl = document.createElement('button');
-//     buttonEl.type = 'button';
-//     buttonEl.classList.add('color-picker__option');
+//! const makeColorPickerOptions = (options) => {
+//   return options.map((option) => {
+//     const buttonEl = document.createElement("button");
+//     buttonEl.type = "button";
+//     buttonEl.classList.add("color-picker__option");
 //     buttonEl.textContent = option.label;
 //     buttonEl.style.backgroundColor = option.color;
 
@@ -209,7 +219,7 @@ const colorPickerOptions = [
 
 // const productsContainerEl = document.querySelector('.js-products');
 
-// const makeProductCard = ({ name, description, price }) => {
+//! const makeProductCard = ({ name, description, price }) => {
 //   const productEl = document.createElement('article');
 //   productEl.classList.add('product');
 

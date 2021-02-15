@@ -15,20 +15,21 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-const ulEl = document.querySelector("ul#gallery");
+const ulEl = document.querySelector("#gallery");
 
 const imagesContainerEl = document.querySelector("images");
 
 const makeImage = (images) => {
-  images.map((image) => {
+  return images.map((image) => {
     const imageEl = document.createElement("img");
     imageEl.src = image.url;
     imageEl.alt = image.alt;
     imageEl.classList.add("flex");
     imageEl.width = 150;
     imageEl.height = 100;
-    ulEl.appendChild(imageEl);
-    // console.log(ulEl);
+
+    return imageEl;
   });
 };
-makeImage(images);
+const imagesEl = makeImage(images);
+ulEl.append(...imagesEl);
