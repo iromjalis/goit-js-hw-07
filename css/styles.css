@@ -5,6 +5,18 @@ body {
   color: hsl(0, 0%, 16%);
 }
 
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
 .flex {
   display: inline-flex;
   justify-content: center;
