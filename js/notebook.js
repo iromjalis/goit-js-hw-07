@@ -549,3 +549,111 @@ const boxRef = document.querySelector(".js-box");
 //     onCloseModal();
 //   }
 // }
+//__________________________________________
+//!====================
+// Callback
+
+// const askName = function (helloMsg) {
+//   let name = prompt("What is your name?");
+//   console.log(helloMsg + name);
+// };
+
+// const askCountry = function (countryMsg) {
+//   let country = prompt("What are you from?");
+//   console.log(countryMsg + country);
+// };
+
+// const greeting = function (callback, callback2) {
+//   let helloMsg = `Hello, my name is `;
+//   let countryMsg = `I am from  `;
+
+//   callback(helloMsg);
+//   callback2(countryMsg);
+// };
+
+// greeting(askName, askCountry);
+
+// __________________________________________________
+
+// const exp = function (n, action) {
+//   for (let i = 1; i < n; i += 1) {
+//     action(i);
+//   }
+// };
+
+// const callback = function (num) {
+//   console.log(num * num);
+// };
+// exp(10, callback);//1,4,9,16,25,36...
+// _____________________________________
+//!Рекурсия
+// const rec = function (num) {
+//   if (num < 10) {
+//     console.log(num);
+//     return rec(num + 1);
+//   }
+// };
+// rec(0);
+
+//___________________________________________
+
+// const a = function (callback) {
+//   let smth = 1;
+//   callback(smth);
+// };
+
+// const b = function (info) {
+//   console.log(info + info);
+// };
+// a(b);
+//_____________________________________________
+//!STORE
+
+const shop = function () {
+  let state = [];
+
+  const addItem = function (name, price, color) {
+    state.push({ name, price, color });
+  };
+
+  const discount = function () {
+    for (let el of state) {
+      el.price *= 0.9;
+    }
+  };
+  const show = function () {
+    console.table(state);
+  };
+  const clearCart = function () {
+    state = [];
+  };
+  return { addItem, discount, show, clearCart };
+};
+
+let customer = shop();
+customer.addItem("Alex", "350", "white");
+customer.addItem("Maxim", "210", "yellow");
+customer.discount();
+customer.show();
+customer.clearCart();
+customer.show();
+customer.addItem("John", "100", "black");
+customer.show();
+//__________________________________________
+const makeShef = function (name) {
+  /*
+   * Параметр name это локальная переменная для функции makeShef.
+   * Это значит что она будет доступна функции makeDish через замыкание.
+   */
+  return function makeDish(dish) {
+    console.log(`${name} is cooking ${dish}`);
+  };
+};
+
+const mango = makeShef("Mango");
+mango("apple pie"); // Mango is cooking apple pie
+mango("beef stew"); // Mango is cooking beef stew
+
+const poly = makeShef("Poly");
+poly("pancakes"); // Poly is cooking pancakes
+poly("eggs and bacon"); // Poly is cooking eggs and bacon
