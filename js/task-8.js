@@ -23,7 +23,7 @@
 }
 
 const boxes = document.querySelector("boxes");
-console.log(boxes);
+// console.log(boxes);
 const renderBtn = document.querySelector("[data-action = 'render']");
 const destroyBtn = document.querySelector("[data-action = 'destroy']");
 // console.log(destroyBtn);
