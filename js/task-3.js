@@ -17,19 +17,8 @@ const images = [
 ];
 const ulEl = document.querySelector("#gallery");
 
-const imagesContainerEl = document.querySelector("images");
-
-const makeImage = (images) => {
-  return images.map((image) => {
-    const imageEl = document.createElement("img");
-    imageEl.src = image.url;
-    imageEl.alt = image.alt;
-    imageEl.classList.add("flex");
-    imageEl.width = 150;
-    imageEl.height = 100;
-
-    return imageEl;
-  });
-};
-const imagesEl = makeImage(images);
-ulEl.append(...imagesEl);
+const image = images.reduce(
+  (string, item) => string + `<img src = "${item.url}" alt = "${item.alt}"  width = "150" height = "100" />`,
+  ""
+);
+ulEl.innerHTML = image;

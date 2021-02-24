@@ -24,60 +24,32 @@ body {
 
   padding-left: 5px;
 }
-.magic-btn {
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin: 10px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrapper {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+  border: 1px solid red;
+}
+h1,
+h2,
+h3 {
   margin: 0;
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  padding: 0;
 }
 
-.magic-btn > .icon {
+img {
   display: inline-block;
-  margin-left: 10px;
-  font-size: 24px;
-}
-
-.site-nav__link {
-  color: currentColor;
-  text-decoration: none;
-}
-
-.site-nav__link:hover {
-  text-decoration: underline;
-}
-
-.site-nav__link--current {
-  color: tomato;
-}
-
-.color-picker__option {
-  display: inline-block;
-  width: 64px;
-  height: 40px;
-  margin: 4px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.transaction-table {
-  border-collapse: collapse;
-}
-
-.transaction-table th,
-.transaction-table td {
-  padding: 8px;
-  border: 1px solid #2a2a2a;
-}
-
-.title__link {
-  display: inline-flex;
-  margin-left: 40px;
+  margin: 10px;
 }

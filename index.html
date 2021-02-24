@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,26 +9,53 @@
 </head>
 
 <body>
-  <p><a href="/index.html">На главную</a></p>
+  <ul>
+    <li><a href="#1">Задание 1</a></li>
+    <li><a href="#2">Задание 2</a></li>
+    <li><a href="#3">Задание 3</a></li>
+    <li><a href="#4">Задание 4</a></li>
+    <li><a href="#5">Задание 5</a></li>
+    <li><a href="#6">Задание 6</a></li>
+    <li><a href="#7">Задание 7</a></li>
+    <li><a href="#8">Задание 8</a></li>
+  </ul>
+
+  <!-- <img
+    src="https://upload.wikimedia.org/wikipedia/fi/thumb/9/95/Albert_Einstein_n%C3%A4ytt%C3%A4%C3%A4_kielt%C3%A4.jpg/436px-Albert_Einstein_n%C3%A4ytt%C3%A4%C3%A4_kielt%C3%A4.jpg"
+    , alt="Albert Einstein" width="150" heigth="auto"> -->
 
 
-  <!-- !=== task 6 === -->
+  <h2 id="8">Задание 8</h2>
+  <div id="controls">
+    <input type="number" min="0" max="100" step="1" />
+    <button type="button" data-action="render">Создать</button>
+    <button type="button" data-action="destroy">Очистить</button>
+  </div>
+
+  <div id="boxes"></div>
+  <h2 id="7">Задание 7</h2>
+  <input id="font-size-control" type="range" />
+  <br />
+  <span id="text">Абракадабра!</span>
+  <h2 id="6">Задание 6</h2>
   <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символов" />
-  <!-- !=== task 5 === -->
-  <!-- <input type="text" placeholder="Ваше имя?" id="name-input" />
-  <h1>Привет, <span id="name-output">незнакомец</span>!</h1> -->
-  <!-- !=== task 4 === -->
-  <!-- <div id="counter">
+  <h2 id="5">Задание 5</h2>
+  <input type="text" placeholder="Ваше имя?" id="name-input" />
+  <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+  <h2 id="4">Задание 4</h2>
+  <div id="counter">
     <button type="button" data-action="decrement">-1</button>
     <span id="value">0</span>
     <button type="button" data-action="increment">+1</button>
-  </div> -->
-  <!-- !=== task 3 === -->
-  <!-- <ul id="gallery"></ul> -->
-  <!-- !=== task 2 === -->
-  <!-- <ul id="ingredients"></ul> -->
-  <!-- !=== task 1 === -->
-  <!-- <ul id="categories">
+  </div>
+  <h2 id="3">Задание 3</h2>
+  <ul id="gallery"></ul>
+
+  <h2 id="2">Задание 2</h2>
+  <ul id="ingredients"></ul>
+
+  <h2 id="1">Задание 1</h2>
+  <ul id="categories">
     <li class="item">
       <h2>Животные</h2>
 
@@ -60,16 +87,17 @@
       </ul>
     </li>
 
-  </ul> -->
+  </ul>
 
-  <script src="./js/notebook.js" type="module"></script>
-  <!-- <script src="./js/task_1.js" type="module"></script> -->
-  <!-- <script src="./js/task_2.js" type="module"></script> -->
-  <!-- <script src="./js/task_3.js" type="module"></script> -->
-  <!-- <script src="./js/task_4.js" type="module"></script> -->
-  <!-- <script src="./js/task_5.js" type="module"></script> -->
-  <!-- <script src="./js/task_6.js" type="module"></script> -->
-  <!-- <script src="./js/repeta.js" type="module"></script> -->
+  <!-- <script src="./js/notebook.js" type="module"></script> -->
+  <script src="./js/task-1.js" type="module"></script>
+  <script src="./js/task-2.js" type="module"></script>
+  <script src="./js/task-3.js" type="module"></script>
+  <script src="./js/task-4.js" type="module"></script>
+  <script src="./js/task-5.js" type="module"></script>
+  <script src="./js/task-6.js" type="module"></script>
+  <script src="./js/task-7.js" type="module"></script>
+  <script src="./js/task-8.js" type="module"></script>
 </body>
 
 </html>

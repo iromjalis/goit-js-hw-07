@@ -5,7 +5,7 @@ const targetBtn = document.querySelector("#value");
 let valueEl = Number(document.querySelector("#value").textContent);
 
 let counterValue = document.querySelector("#value");
-console.dir(counterValue);
+// console.dir(counterValue);
 
 const parentDivEL = document.querySelector("#counter");
 const dekrBtn = parentDivEL.firstElementChild;
