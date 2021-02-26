@@ -13,3 +13,4 @@ function onInputChange(event) {
 
   inputEl !== ' ' ? (outputEl.innerText = inputEl) : 'незнакомец';
 }
+

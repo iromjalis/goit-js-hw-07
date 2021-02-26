@@ -20,3 +20,11 @@ inputEl.addEventListener('change', e => {
     inputEl.classList.add('invalid');
   }
 });
+
+// inputEl.classList.remove("invalid", "valid");
+// let addClass = "invalid";
+// if (text.length === +inputLength) addClass = "valid";
+// inputEl.classList.add(addClass);
+
+// if (text.length === +inputLength) inputEl.className = "valid";
+// else inputEl.className = "invalid";
