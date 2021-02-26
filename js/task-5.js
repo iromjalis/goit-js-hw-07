@@ -3,13 +3,13 @@
 <h1>Привет, <span id="name-output">незнакомец</span>!</h1> */
 }
 
-let inputEl = document.querySelector("#name-input");
-inputEl.addEventListener("input", onInputChange);
+let inputEl = document.querySelector('#name-input');
+inputEl.addEventListener('input', onInputChange);
 
-let outputEl = document.querySelector("#name-output");
+let outputEl = document.querySelector('#name-output');
 
 function onInputChange(event) {
   inputEl = event.currentTarget.value;
 
-  outputEl.innerText = inputEl;
+  inputEl !== ' ' ? (outputEl.innerText = inputEl) : 'незнакомец';
 }
