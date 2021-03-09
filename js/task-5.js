@@ -10,7 +10,7 @@ let outputEl = document.querySelector('#name-output');
 
 function onInputChange(event) {
   inputEl = event.currentTarget.value;
+  console.log(inputEl);
 
-  inputEl !== ' ' ? (outputEl.innerText = inputEl) : 'незнакомец';
+  inputEl !== ' ' ? (outputEl.innerText = inputEl.trim()) : 'незнакомец';
 }
-

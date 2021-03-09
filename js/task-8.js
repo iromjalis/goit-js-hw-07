@@ -21,55 +21,33 @@
 
 <div id="boxes"></div> */
 }
+var render = document.querySelector('[data-action="render"]');
+var destroy = document.querySelector('[data-action="destroy"]');
+var boxes = document.getElementById('boxes');
+render.addEventListener('click', getAmount);
+destroy.addEventListener('click', destroyBoxes);
 
-const boxes = document.createElement('div');
-boxes.classList.add('boxes');
-document.querySelector('#controls').appendChild(boxes);
-
-const input = document.querySelector('#controls').children[0];
-console.log(input.value);
-
-const createBtn = document.querySelector('[data-action="render"]');
-console.log(createBtn);
-
-const removeBtn = document.querySelector('[data-action="destroy"]');
-console.log(removeBtn);
-let boxQuantity;
-
-input.addEventListener('change', onValueInput);
-
-function onValueInput(event) {
-  // console.log(event.currentTarget.value);
-  boxQuantity = event.currentTarget.value;
-  console.log(boxQuantity);
-  return boxQuantity;
+function getAmount() {
+  var amount = +document.querySelector('#controls input').value;
+  createBoxes(amount);
 }
-
-createBtn.addEventListener('click', () => createBoxes(boxQuantity));
-removeBtn.addEventListener('click', () => removeBoxes(boxQuantity));
 
 function createBoxes(amount) {
-  const box = document.createElement('div');
-  let width = 30;
-  let height = 30;
-  box.style.width = `${width}px`;
-  box.style.height = `${height}px`;
-  let x = Math.floor(Math.random() * 256);
-  let y = Math.floor(Math.random() * 256);
-  let z = Math.floor(Math.random() * 256);
-  box.style.backgroundColor = `rgb(${x}, ${y}, ${z})`;
-  if (amount === 1) {
-    // boxes.append(box);
+  var basicSize = 30;
+  var fragment = document.createDocumentFragment();
+  for (var i = 0; i < amount; i++) {
+    var size = basicSize + i * 10;
+    var div = document.createElement('div');
+    div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba( ${random()} , ${random()} , ${random()} )`;
+    fragment.appendChild(div);
   }
-  if (amount >= 1) {
-    for (let i = 0; i <= amount; i += 1) {
-      width += 10;
-      height += 10;
-      boxes.append(box);
-    }
-  }
+  boxes.appendChild(fragment);
 }
 
-function removeBoxes() {
-  boxes.remove();
+function destroyBoxes() {
+  boxes.innerHTML = '';
+}
+
+function random() {
+  return Math.floor(Math.random() * 256);
 }
